@@ -1,0 +1,13 @@
+[Unit]
+Description=KMZ Parser Service
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+WorkingDirectory=/home/pi/ProjectCM/
+ExecStart=/usr/bin/python /home/pi/ProjectCM/newgis.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
